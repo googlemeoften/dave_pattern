@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/cn/edu/bubblesort/BubbleSort.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/cn/edu/hillsort/HillSort.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/cn/edu/insertionsort/InsertSort.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/cn/edu/selectionsort/SelectionSort.java" charset="UTF-8" />
+  </component>
+</project>
