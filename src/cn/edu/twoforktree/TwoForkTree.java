@@ -1,7 +1,7 @@
 package cn.edu.twoforktree;
 
 /**
- * Description:
+ * Description:二叉树的非递归实现
  * Author: Hey
  * Date: 2015/12/8
  */
@@ -9,7 +9,7 @@ public class TwoForkTree<T> {
 
     public Node root;
 
-    //????
+    //插入节点
     public boolean insert(int value) {
 
         Node newNode = new Node(value);
@@ -38,7 +38,7 @@ public class TwoForkTree<T> {
         return true;
     }
 
-    //????
+    //查找结点
     public Node find(Integer value) {
 
         if (root == null)
@@ -57,7 +57,7 @@ public class TwoForkTree<T> {
         }
 
     }
-
+    //删除节点
     public Node remove(int value){
 
         if(root==null)
@@ -150,7 +150,9 @@ public class TwoForkTree<T> {
         }
     }
 
-    //前序遍历
+    /**
+     * 前序遍历
+     */
     public void beforeOrder(Node node){
         if(node!=null){
             System.out.println(node);
@@ -159,7 +161,10 @@ public class TwoForkTree<T> {
         }
     }
 
-    //后序遍历
+    /**
+     * 后序遍历
+     * @param node
+     */
     public void afterOrder(Node node){
         if(node!=null){
             afterOrder(node.leftChild);
