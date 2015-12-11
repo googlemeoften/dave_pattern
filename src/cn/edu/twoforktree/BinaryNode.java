@@ -1,7 +1,7 @@
 package cn.edu.twoforktree;
 
 /**
- * Description:
+ * Description:二叉树结点
  * Author: Hey
  * Date: 2015/12/10
  */

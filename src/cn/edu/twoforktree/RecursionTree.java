@@ -1,7 +1,7 @@
 package cn.edu.twoforktree;
 
 /**
- * Description:Í¨¹ıµİ¹éÀ´²Ù×÷Ê÷
+ * Description:é€šè¿‡é€’å½’æ¥æ“ä½œæ ‘
  * Author: Hey
  * Date: 2015/12/10
  */
@@ -9,12 +9,16 @@ public class RecursionTree {
 
     private BinaryNode root;
 
+    /**
+     * æ·»åŠ èŠ‚ç‚¹
+     * @param value
+     */
     public void insert(Integer value){
         root=insert(value,root);
     }
 
     /**
-     * ²åÈë
+     * æ’å…¥èŠ‚ç‚¹
      * @param value
      * @param node
      * @return
@@ -37,6 +41,12 @@ public class RecursionTree {
         return node;
     }
 
+    /**
+     * åˆ é™¤èŠ‚ç‚¹
+     * @param value
+     * @param node
+     * @return
+     */
     public BinaryNode remove(Integer value,BinaryNode node){
         if(node==null)
             return null;
@@ -57,7 +67,7 @@ public class RecursionTree {
     }
 
     /**
-     * ²éÕÒÊ÷ÖÖÊÇ·ñ°üº¬Ä³¸öÔªËØ
+     * æŸ¥æ‰¾æ ‘æ˜¯å¦åŒ…å«æŸä¸ªå…ƒç´ 
      * @param value
      * @return
      */
@@ -66,7 +76,7 @@ public class RecursionTree {
     }
 
     /**
-     * ²éÕÒÊ÷ÖÖÊÇ·ñ°üº¬Ä³¸öÔªËØ
+     * æŸ¥æ‰¾æ ‘æ˜¯å¦åŒ…å«æŸä¸ªå…ƒç´ 
      * @param value
      * @param node
      * @return
@@ -85,6 +95,11 @@ public class RecursionTree {
         }
     }
 
+    /**
+     * æŸ¥æ‰¾æœ€å°å€¼
+     * @param node
+     * @return
+     */
     public BinaryNode findMin(BinaryNode node){
         if(node==null)
             return null;
@@ -95,7 +110,7 @@ public class RecursionTree {
     }
 
     /**
-     * ²éÕÒ×î´óÔªËØ
+     * æŸ¥æ‰¾æœ€å¤§å…ƒç´ 
      * @param node
      * @return
      */
@@ -111,7 +126,7 @@ public class RecursionTree {
     }
 
     /**
-     * ÖĞĞòÅÅÁĞ
+     * ä¸­åºæ’åˆ—
      * @param node
      */
     public void inOrder(BinaryNode node){
