@@ -1,7 +1,7 @@
 package cn.edu.avltree;
 
 /**
- * Description:Æ½ºâ¶ş²æÊ÷
+ * Description:å¹³è¡¡äºŒå‰æ ‘
  * Author: Hey
  * Date: 2015/12/11
  */
@@ -47,7 +47,7 @@ public class AVLTree {
     }
 
     /**
-     * ×óĞı
+     * å·¦æ—‹
      * @param k2
      * @return
      */
@@ -61,7 +61,7 @@ public class AVLTree {
     }
 
     /**
-     * ÓÒĞı
+     * å³æ—‹
      * @param k2
      * @return
      */
@@ -75,7 +75,7 @@ public class AVLTree {
     }
 
     /**
-     * ×óË«Ğı
+     * å·¦åŒæ—‹
      * @param k3
      * @return
      */
@@ -85,7 +85,7 @@ public class AVLTree {
     }
 
     /**
-     * ÓÒË«Ğı
+     * å³åŒæ—‹
      * @param k3
      * @return
      */
