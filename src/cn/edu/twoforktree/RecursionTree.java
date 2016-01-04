@@ -11,56 +11,74 @@ public class RecursionTree {
 
     /**
      * 添加节点
+     *
      * @param value
      */
-    public void insert(Integer value){
-        root=insert(value,root);
+    public void insert(Integer value) {
+        root = insert(value, root);
     }
 
     /**
      * 插入节点
+     *
      * @param value
      * @param node
      * @return
      */
-    public BinaryNode insert(Integer value,BinaryNode node){
-        if(node==null){
-            return new BinaryNode(value,null,null);
+    public BinaryNode insert(Integer value, BinaryNode node) {
+        if (node == null) {
+            return new BinaryNode(value, null, null);
         }
 
-        int compareResult=value.compareTo(node.getValue());
+        int compareResult = value.compareTo(node.getValue());
 
-        if(compareResult<0){
-            node.leftChild=insert(value,node.leftChild);
-        }else if(compareResult>0){
-            node.rightChild=insert(value,node.rightChild);
-        }else{
+        if (compareResult < 0) {
+            node.leftChild = insert(value, node.leftChild);
+        } else if (compareResult > 0) {
+            node.rightChild = insert(value, node.rightChild);
+        } else {
 
         }
 
         return node;
     }
+
+//    private Node insert(Node node, Node parent, Integer value) {
+//        if (node == null)
+//            return new Node(value, parent, false);
+//
+//        int result = value.compareTo(node.getValue());
+//
+//        if (result < 0)
+//            node.leftChild = insert(node.leftChild, node, value);
+//        else if (result > 0) {
+//            node.rightChild = insert(node.rightChild, node, value);
+//        }
+//        return node;
+//    }
+
 
     /**
      * 删除节点
+     *
      * @param value
      * @param node
      * @return
      */
-    public BinaryNode remove(Integer value,BinaryNode node){
-        if(node==null)
+    public BinaryNode remove(Integer value, BinaryNode node) {
+        if (node == null)
             return null;
-        int compareResult=value.compareTo(node.getValue());
+        int compareResult = value.compareTo(node.getValue());
 
-        if(compareResult<0){
-            node.leftChild=remove(value,node.leftChild);
-        }else if(compareResult>0){
-            node.rightChild=remove(value,node.rightChild);
-        }else if(node.leftChild!=null&&node.rightChild!=null){
+        if (compareResult < 0) {
+            node.leftChild = remove(value, node.leftChild);
+        } else if (compareResult > 0) {
+            node.rightChild = remove(value, node.rightChild);
+        } else if (node.leftChild != null && node.rightChild != null) {
             node.setValue(findMin(node.rightChild).getValue());
-            node.rightChild=remove(node.getValue(),node.rightChild);
-        }else{
-            node=(node.leftChild!=null)?node.leftChild:node.rightChild;
+            node.rightChild = remove(node.getValue(), node.rightChild);
+        } else {
+            node = (node.leftChild != null) ? node.leftChild : node.rightChild;
         }
 
         return node;
@@ -68,42 +86,45 @@ public class RecursionTree {
 
     /**
      * 查找树是否包含某个元素
+     *
      * @param value
      * @return
      */
-    public boolean contains(Integer value){
-        return contains(value,this.root);
+    public boolean contains(Integer value) {
+        return contains(value, this.root);
     }
 
     /**
      * 查找树是否包含某个元素
+     *
      * @param value
      * @param node
      * @return
      */
-    public boolean contains(Integer value,BinaryNode node){
-        if(node==null)
+    public boolean contains(Integer value, BinaryNode node) {
+        if (node == null)
             return false;
-        int compareResult=value.compareTo(node.getValue());
+        int compareResult = value.compareTo(node.getValue());
 
-        if(compareResult==0){
+        if (compareResult == 0) {
             return true;
-        }else if(compareResult<0){
-            return contains(value,node.leftChild);
-        }else {
-            return contains(value,node.rightChild);
+        } else if (compareResult < 0) {
+            return contains(value, node.leftChild);
+        } else {
+            return contains(value, node.rightChild);
         }
     }
 
     /**
      * 查找最小值
+     *
      * @param node
      * @return
      */
-    public BinaryNode findMin(BinaryNode node){
-        if(node==null)
+    public BinaryNode findMin(BinaryNode node) {
+        if (node == null)
             return null;
-        else if(node.leftChild==null)
+        else if (node.leftChild == null)
             return node;
 
         return findMin(node.leftChild);
@@ -111,26 +132,28 @@ public class RecursionTree {
 
     /**
      * 查找最大元素
+     *
      * @param node
      * @return
      */
-    public BinaryNode findMax(BinaryNode node){
+    public BinaryNode findMax(BinaryNode node) {
 
-        BinaryNode current=node;
-        BinaryNode parent=null;
-        while(current!=null){
-            parent=current;
-            current=current.rightChild;
+        BinaryNode current = node;
+        BinaryNode parent = null;
+        while (current != null) {
+            parent = current;
+            current = current.rightChild;
         }
         return parent;
     }
 
     /**
      * 中序排列
+     *
      * @param node
      */
-    public void inOrder(BinaryNode node){
-        if(node==null)
+    public void inOrder(BinaryNode node) {
+        if (node == null)
             return;
         inOrder(node.leftChild);
         System.out.println(node.getValue());
@@ -138,8 +161,8 @@ public class RecursionTree {
     }
 
 
-    public static void main(String []args){
-        RecursionTree tree=new RecursionTree();
+    public static void main(String[] args) {
+        RecursionTree tree = new RecursionTree();
         tree.insert(45);
         tree.insert(90);
         tree.insert(40);
@@ -151,9 +174,9 @@ public class RecursionTree {
 
         System.out.println(tree.contains(41));
 
-        tree.remove(40,tree.root);
+        tree.remove(40, tree.root);
 
         tree.inOrder(tree.root);
     }
-    
+
 }
