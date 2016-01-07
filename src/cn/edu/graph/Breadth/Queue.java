@@ -1,7 +1,7 @@
 package cn.edu.graph.Breadth;
 
 /**
- * Description:����
+ * Description:循环队列
  * Author: Hey
  * Date: 2015/12/12
  */
@@ -37,11 +37,19 @@ public class Queue {
         return vertexs[front];
     }
 
+    /**
+     * 队列是否
+     * @return
+     */
     public boolean isFull(){
         //System.out.println(fear);
         return ((fear+1)%maxSize==front);
     }
 
+    /**
+     * 队列是否为空
+     * @return
+     */
     public boolean isEmpty() {
         return (front == fear);
     }
