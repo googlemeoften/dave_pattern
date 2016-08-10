@@ -1,4 +1,4 @@
-package cn.edu.bubblesort;
+package cn.edu.datastructure.bubblesort;
 
 import java.util.Arrays;
 
