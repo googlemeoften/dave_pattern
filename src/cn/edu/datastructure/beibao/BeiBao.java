@@ -1,5 +1,8 @@
-package cn.edu.beibao;
+package cn.edu.datastructure.beibao;
 
+/***
+ * 动态规划背包问题
+ */
 public class BeiBao {
 
     public static void main(String[] args) {
