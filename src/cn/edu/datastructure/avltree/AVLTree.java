@@ -1,4 +1,4 @@
-package cn.edu.avltree;
+package cn.edu.datastructure.avltree;
 
 /**
  * Description:平衡二叉树
